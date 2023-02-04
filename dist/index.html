@@ -6,5 +6,102 @@
   </head>
   <body>
     <script src="main.js"></script>
+    <div id="content">
+      <div id="header">
+        <div class="section-1">
+          <img
+            class="image-small"
+            src="../images/logo-white-removebg.png"
+            alt="Restaurant logo"
+          />
+        </div>
+        <div class="section-2">
+          <div>Home</div>
+          <div>Menu</div>
+          <div>Contact</div>
+        </div>
+      </div>
+      <div id="center">
+        <img
+          class="image-large"
+          src="../images/logo-white-removebg.png"
+          alt="Restaurant logo"
+        />
+        <div>Since 1966</div>
+        <div>
+          Speakeasy with no reservations. Knock, and journey through the tunnels
+          of our establishment!
+        </div>
+      </div>
+      <div id="footer">
+        <div class="social-media">
+          <img src="../images/yelp-logo.png" alt="Yelp icon" />
+          <img src="../images/facebook-icon.png" alt="Facebook icon" />
+          <img src="../images/instagram-icon.png" alt="Instagram icon" />
+          <img src="../images/whatsapp-icon.png" alt="Whatsapp icon" />
+        </div>
+        <div class="credits">
+          <div class="item-1">Website created by Daniel Ballerini</div>
+          <div class="item-2">
+            with help from the
+            <a href="https://www.theodinproject.com/"> © Odin Project</a>
+          </div>
+        </div>
+      </div>
+      <style>
+        body,
+        html {
+          width: 100vw;
+          height: 100vh;
+          margin: 0;
+        }
+
+        .image-small {
+          width: 150px;
+        }
+
+        .image-large {
+          width: 350px;
+        }
+
+        #content {
+          display: flex;
+          flex-direction: column;
+        }
+
+        #header {
+          /* I want to make this look better*/
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          background-color: black;
+          padding: 0 100px 0 100px;
+        }
+
+        .section-1 {
+          flex: 0.5 1 0;
+          display: flex;
+          justify-content: center;
+        }
+
+        .section-2 {
+          display: flex;
+          flex: 1 1 0;
+          justify-content: center;
+          gap: 70px;
+          color: white;
+          font-size: 1.5rem;
+        }
+
+        #center {
+          flex: 1 0 0;
+          background-image: url(../images/cocktail-bar-min.jpeg);
+          background-size: 100%;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      </style>
+    </div>
   </body>
 </html>
