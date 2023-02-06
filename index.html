@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" href="../images/logo-removebg-small.png" />
     <title>Restaurant Page</title>
   </head>
   <body>
@@ -11,7 +12,7 @@
         <div class="section-1">
           <img
             class="image-small"
-            src="../images/logo-white-removebg.png"
+            src="../images/logo-removebg-small.png"
             alt="Restaurant logo"
           />
         </div>
@@ -24,13 +25,20 @@
       <div id="center">
         <img
           class="image-large"
-          src="../images/logo-white-removebg.png"
+          src="../images/logo-large.png"
           alt="Restaurant logo"
         />
-        <div>Since 1966</div>
         <div>
-          Speakeasy with no reservations. Knock, and journey through the tunnels
-          of our establishment!
+          <div>Since 1966</div>
+          <div>
+            Speakeasy with no reservations. Knock, and journey through the
+            tunnels of our establishment!
+          </div>
+        </div>
+        <div class="photo-credits">
+          Photo by
+          <a href="https://unsplash.com/@quinguyen">Qui Nguyen</a> on
+          <a href="https://unsplash.com/">Unsplash</a>
         </div>
       </div>
       <div id="footer">
@@ -49,19 +57,21 @@
         </div>
       </div>
       <style>
+        @font-face {
+          font-family: Roboto;
+          src: url(../Roboto/Roboto-Regular.ttf);
+        }
+
         body,
         html {
           width: 100vw;
           height: 100vh;
           margin: 0;
+          font-family: "Roboto";
         }
 
-        .image-small {
-          width: 150px;
-        }
-
-        .image-large {
-          width: 350px;
+        #content {
+          height: 100vh;
         }
 
         #content {
@@ -70,13 +80,18 @@
         }
 
         #header {
-          /* I want to make this look better*/
           display: flex;
           flex-wrap: wrap;
           justify-content: center;
           align-items: center;
           background-color: black;
           padding: 0 100px 0 100px;
+        }
+
+        .image-small {
+          width: 70px;
+          padding: 10px;
+          cursor: pointer;
         }
 
         .section-1 {
@@ -94,12 +109,81 @@
           font-size: 1.5rem;
         }
 
+        .section-2 > * {
+          cursor: pointer;
+        }
+
+        .section-2 > *:hover {
+          color: gold;
+        }
+
         #center {
           flex: 1 0 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          font-size: 1.5rem;
+          color: white;
           background-image: url(../images/cocktail-bar-min.jpeg);
-          background-size: 100%;
+          background-size: cover;
           background-repeat: no-repeat;
           background-position: center;
+        }
+
+        .image-large {
+          width: 350px;
+          position: relative;
+          bottom: 50px;
+        }
+
+        #center > div:nth-child(2) {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          position: relative;
+          bottom: 65px;
+          text-align: center;
+          max-width: 500px;
+          margin: 0 50px;
+        }
+
+        #center > div:last-child {
+          font-size: 1rem;
+          position: relative;
+          bottom: 40px;
+        }
+
+        #footer {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 10px 0;
+          color: white;
+          background-color: black;
+        }
+
+        .social-media {
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+          width: 50vw;
+        }
+
+        .social-media > * {
+          cursor: pointer;
+        }
+
+        a {
+          color: white;
+        }
+
+        /* Header adjusts when links wrap*/
+        @media screen and (max-width: 638px) {
+          .section-2 {
+            padding-bottom: 10px;
+          }
         }
       </style>
     </div>
