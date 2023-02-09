@@ -9,6 +9,7 @@ function contactLoad() {
   // Declare html elements
   const html = document.querySelector("html");
   const body = document.querySelector("body");
+  const head = document.querySelector("head");
   const content = document.querySelector("#content");
   const header = document.createElement("div");
   const section1 = document.createElement("div");
@@ -125,6 +126,12 @@ function contactLoad() {
   item2.appendChild(item2Text);
   item2.appendChild(odinProject);
   odinProject.appendChild(odinProjectText);
+
+  // Add favicon
+  const link = document.createElement("link");
+  link.setAttribute("rel", "icon");
+  link.setAttribute("href", logoRemoveBgSmall);
+  head.appendChild(link);
 
   // Add background image
   center.style.backgroundImage = `url(${backgroundImg})`;
